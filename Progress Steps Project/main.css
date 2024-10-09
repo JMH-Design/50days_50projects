@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: light;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container {
+  text-align: center;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 30px;
+  max-width: 100%;
+  width: 300px;
+}
+.progress-container::before {
+  content: '';
+  background: #e0e0e0;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 4px;
+}
+.progress {
+  background: skyblue;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+.btn {
+  font-size: medium;
+  background-color: dodgerblue;
+  border-radius: 16px;
+  display: inline;
+}
